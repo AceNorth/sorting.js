@@ -1,3 +1,4 @@
+//adding test code to see if Github process is working
 function split(wholeArray) {
   var halfway = Math.ceil(wholeArray.length/2);
   // console.log(halfway);
