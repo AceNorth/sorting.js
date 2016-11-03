@@ -26,10 +26,12 @@ return mergedArray.concat(longer);
 }
 
 function mergeSort(array) {
-	console.log(array);
-	if (array.length === 2) {
-		return merge(split(array));
+	if (array.length === 1) {
+		return array;
 	}
-	return mergeSort(...split(array));
+	var splits = split(array),
+		arr1 = splits[0],
+		arr2 = splits[1];
+	return merge(mergeSort(arr1), mergeSort(arr2));
 }
 
